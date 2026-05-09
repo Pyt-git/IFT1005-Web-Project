@@ -1,0 +1,200 @@
+<!doctype html>  
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Tracker</title>
+    <link rel="stylesheet" href="Projet2.css" />
+  </head>
+  <body>
+   <header>
+    <div class="logo-title">
+     <img src="assets/popcorn.jpg" alt="popcorn">
+     <h1><b>Movie Tracker</b></h1>
+     <nav>
+       <a href="#ajouter">Ajouter</a>
+       <a href="#selection">Sélection</a>
+       <a href="#stats">Statistiques</a>
+       <a href="#liste">Liste</a>
+       <a href="#video">Bande d'annonce</a>
+     </nav>
+    </div>
+   </header>
+
+    <main>
+        <section id="ajouter">
+            <h1>Ajouter un film ou une série</h1>
+            <p>Remplissez le formulaire pour ajouter un élément à votre collection</p>
+            <form id="add-form">
+                <div class="field">
+                    <label for="titre">Titre</label>
+                    <input id="titre" type="text" name="Titre du film" placeholder=Ex.Inception required>
+                </div>
+
+                <div class="field">
+                    <label for="Genre">Genre</label>
+                    <select name="Choisir un genre" id="genre" required>
+                        <option value="Choisir un genre">Choisir un genre</option>
+                        <option value="Action">Action</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Science-fiction">Science-fiction</option>
+                        <option value="Fantaisie">Fantaisie</option>
+                        <option value="Comédie">Comédie</option>
+                        <option value="Drame">Drame</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Documentaire">Documentaire</option>
+                        <option value="Série">Série</option>
+                    </select>
+                        
+                </div>
+
+                <div class="field">
+                    <label for="Statut">Statut</label>
+                    <select name="Choisir un statut" id="statut" required>
+                        <option value="Choisir un statut">choisir un statut</option>
+                        <option value="À voir">À voir</option>
+                        <option value="En cours">En cours</option>
+                        <option value="Vu">Vu</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <button type="submit">Ajouter<button>
+                </div>
+            </form>
+                    
+
+        </section>
+
+        <section id="selection" class="selection-section">
+            <h1>Sélection cinéma</h1>
+            
+            <div class="film-cards">
+                <article class="film-card">
+                    <img src="assets/inception.jpg" alt="Inception">
+                    <h3>Inception</h3>
+                    <p>Un thriller de science-fiction sur les rêves et la manipulation de l'esprit.</p>
+                </article>
+
+                <article class="film-card">
+                    <img src="assets/titanic.jpg" alt="Titanic">
+                    <h3>Titanic</h3>
+                    <p>Une histoire d'amour dramatique sur un fond de catastrophe maritime.</p>
+                </article>
+
+                <article class="film-card">
+                    <img src="assets/batman.jpg" alt="Batman">
+                    <h3>Batman</h3>
+                    <p>Un héros affronte le crime dans une ville intense et dangereuse.</p>
+                </article>
+
+                <article class="film-card">
+                    <img src="assets/harrypotter.jpg" alt="Harry Potter">
+                    <h3>Harry Potter</h3>
+                    <p>Une saga fantastique dans un univers magique rempli d'aventures.</p>
+                </article>
+            </div>
+
+
+        </section>
+
+        <section id="stats" class="stats-section">
+            <h1>Statistiques</h1>
+
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <h3>Total</h3>
+                    <p id="stat-total">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <h3>À voir</h3>
+                    <p id="stat-a-voir">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <h3>En cours</h3>
+                    <p id="stat-en-cours">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <h3>Vu</h3>
+                    <p id="stat-vu">0</p>
+                </div>
+            </div>
+
+                
+        </section>
+
+        <section id="liste">
+            <h1>Mes films et séries</h1>
+            
+            <!--Filtrer-->
+            <div class="filter-bar">
+                <label for="filter-status">Filtrer</label>
+                <select id="filter-status">
+                    <option value="tous">Tous</option>
+                    <option value="À voir">À voir</option>
+                    <option value="En cours">En cours</option>
+                    <option value="Vu">Vu</option>
+                </select>
+            </div>
+
+            <!--Tableau-->
+            <table id="films-table">
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Genre</th>
+                        <th>Statut</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="films-body">
+                    <tr>
+                        <td>Inception</td>
+                        <td>Science-fiction</td>
+                        <td>Vu</td>
+                        <td><button class="delete-btn">Supprimer</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Stranger Things</td>
+                        <td>Série</td>
+                        <td>En cours</td>
+                        <td><button class="delete-btn">Supprimer</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Toy Story</td>
+                        <td>Animation</td>
+                        <td>À voir</td>
+                        <td><button class="delete-btn">Supprimer</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+                    
+        </section>
+
+        <section id="video">
+            <h1>Bande d'annonce de votre film préféré</h1>
+
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/YoHD9XEInc0"
+                    title="Youtube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 IFT1005&nbsp;|&nbsp;<a href="">Privacy</a>&nbsp;|&nbsp;<a href="">Contact</a>&nbsp;|</p></footer>
+  </body>
+  <script src="projet2.js"></script>
+</html>

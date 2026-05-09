@@ -1,0 +1,218 @@
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-title img {
+    height: 40px;
+}
+
+.logo-title h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 40px;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav{
+    margin-left: auto;
+}
+
+
+#ajouter {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: lightgray;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.field input, 
+.field select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#ajouter button{
+    padding: 12px;
+    background-color: #2c3e50;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; /* Lorsque la souris est sur la zone du bouton, le curseur devient une main */
+    font-size: 1rem;
+}
+
+#ajouter button:hover {
+    background-color: #1a252f;
+}
+
+.selection-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightslategray;
+}
+
+.film-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.film-card {
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.film-card img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover; /* Assure qu'il n'y a pas de distortion dans le cropping de l'image */
+}
+
+.stats-section { 
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: lightsteelblue;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.stats-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.stats-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.stats-card p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.filter-bar { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#films-table td, th {
+    padding: 15px, 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead tr {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+tbody {
+    border-spacing: 30px;
+}
+
+#films-table {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    border-radius: 6px;
+    border: 1px solid #000;
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    overflow: hidden;  
+}
+
+#liste {
+    background-color: lightsteelblue;
+    padding-bottom: 20px;
+}
+
+#films-table thead tr {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+#films-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#video {
+    background-color: lightsteelblue;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 56.25%; /* rapport d'aspect 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; /* distance entre bordures superieures de l'element et de son conteneur */
+    left: 0; /* distance entre bordures gauche de l'element et de son conteneur */
+    width: 100%; /* couvre toute la largeur du conteneur */
+    height: 100%; /* couvre toute la hauteur du conteneur */
+    border-radius: 6px;
+}
+
+.delete-btn {
+    background-color: #ff0000;
+    font-style: bold;
+    border-radius: 6px;
+}
